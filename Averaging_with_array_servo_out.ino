@@ -1,5 +1,5 @@
 #include <Servo.h>
-Servo servoMain;                          // Define Servo
+Servo servoMain;                          //Define Servo
 
 const  int  xIn = 2;                      //set pin to read Xaxis accelerometer
 const  int  yIn = 4;                      //set pin to read Yaxis accelerometer
@@ -42,7 +42,7 @@ void loop() {
   
   if (pulseXa < 5000 && pulseXa >4900 && pulseYa < 5000 && pulseYa >4900 ){  //Set stability limits for comparison
     Serial.print ("STABLE ");
-    Serial.print ("\t");                  //tab
+    Serial.print ("\t");                  //tab out
     Serial.print ("\t");
     Serial.print ("Xaxis = ");            
     //Serial.print ("\t");
@@ -61,7 +61,7 @@ void loop() {
       delay (1000);
       digitalWrite(LED, 0);
       delay(20);
-      angle = angle + 15;                //increment servo
+      angle = angle + 15;                  //increment servo
       score = 0;                           //reset score
     }
   }
@@ -79,7 +79,7 @@ void loop() {
     Serial.print ("\t");
     score = 0;                             //reset score
     Serial.print ("Score = ");
-    Serial.println (score);                //print score
+    Serial.println (score);                //print score, zero
   }
   delay (100);
 }
