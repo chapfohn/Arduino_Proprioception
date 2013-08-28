@@ -7,8 +7,8 @@ const  int  LED = 13;                     //set pin to LED flag
 
 const  int  n   = 10;
 
-int         score = 0; 
-int         angle = 0;
+int         score = 0;                    //longer term stability measure
+int         angle = 0;                    //increment servo
 
 void setup() {
   Serial.begin(9600);                      //set baud rate for serial communication with Serial Monitor (debug)
